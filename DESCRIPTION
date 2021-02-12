@@ -1,0 +1,26 @@
+Package: fdaks
+Type: Package
+Title: Orthonormal Basis Selection using Machine Learning
+Version: 0.1.0
+Authors@R: 
+    c(person(given = "Rani",
+             family = "Basna",
+             role = c("aut", "cre"),
+             email = "ranibasna@gmail.com"),
+      person(given = "Hiba",
+             family = "Nassar",
+             role = c("aut"),
+             email = "hibna@dtu.dk"),
+      person(given = "Krzysztof",
+             family = "Podgórski",
+             role = c("aut"),
+             email = "Krzysztof.Podgorski@stat.lu.se "))
+Maintainer: The package maintainer <ranibasna@gmail.com>
+Description: Use machine learning methods to assit in finding optimal orthonormal basis selection.
+License: GPL-3
+Encoding: UTF-8
+LazyData: true
+Language: en-US
+RoxygenNote: 7.1.0
+Suggests: 
+    testthat
