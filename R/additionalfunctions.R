@@ -17,14 +17,16 @@
 #' @export
 #' @importFrom stats na.omit
 
-mse=function(x)
-{
+mse=function(x){
+  if (!(is.data.frame(x) | is.matrix(x) | is.vector(x))){
+    stop("The argument x is not a dataframe, matrix or vector")
+  }
   if(all(is.na(x))){
     return(NA)
   }
   else{
     x <- na.omit(x)
-    sum((x-mean(x))^2)/length(x)
+    return(sum((x-mean(x))^2)/length(x))
   }
 }
 
@@ -37,8 +39,10 @@ mse=function(x)
 #' @export
 #' @importFrom stats na.omit
 
-amse= function(f)
-{
+amse= function(f){
+  if (!(is.data.frame(f) | is.matrix(f))){
+      stop("The argument x is not a dataframe, matrix")
+ }
   # mse
   row_mse = apply(f,1,mse)
   if(all(is.na(row_mse))){
