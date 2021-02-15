@@ -2,7 +2,9 @@
 
 export(amse)
 export(mse)
+export(opt_split)
 export(rbetafda)
+export(split)
 import(graphics)
 importFrom(graphics,grid)
 importFrom(stats,dbeta)

@@ -40,8 +40,8 @@ mse=function(x){
 #' @importFrom stats na.omit
 
 amse= function(f){
-  if (!(is.data.frame(f) | is.matrix(f))){
-      stop("The argument x is not a dataframe, matrix")
+  if (!(is.data.frame(f) | is.matrix(f) | is.vector(f))){
+      stop("The argument x is not a dataframe, matrix, or vector")
  }
   # mse
   row_mse = apply(f,1,mse)
