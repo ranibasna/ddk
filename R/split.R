@@ -24,8 +24,11 @@
 #' plot(xx)
 
 split=function(f,i){
-  if (!(is.data.frame(f) | is.matrix(f))){
+  if (!(is.data.frame(f) | is.matrix(f) | is.vector(f))){
     stop("The argument x is not a dataframe, matrix")
+  }
+  if(is.vector(f)){
+    f <- t(as.matrix(f))
   }
   nx=dim(f)[2]    ### number of grid
   F1=f[,1:i, drop=FALSE]
