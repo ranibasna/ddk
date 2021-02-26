@@ -1,4 +1,4 @@
 library(testthat)
-library(fdaks)
+library(DDK)
 
-test_check("fdaks")
+test_check("DDK")

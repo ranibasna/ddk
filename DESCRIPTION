@@ -1,4 +1,4 @@
-Package: fdaks
+Package: DDK
 Type: Package
 Title: Orthonormal Basis Selection using Machine Learning
 Version: 0.1.0

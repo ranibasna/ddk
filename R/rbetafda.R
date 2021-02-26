@@ -14,6 +14,7 @@
 #'
 #' @examples
 #' f1=rbetafda(10)
+#'
 
 rbetafda=function(n,nx=500,ta=1,tb=1,sigma=0,K=1000, seed)
 {

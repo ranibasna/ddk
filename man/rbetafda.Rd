@@ -27,4 +27,5 @@ Function to produce generic functional data
 }
 \examples{
 f1=rbetafda(10)
+
 }

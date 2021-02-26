@@ -46,9 +46,12 @@ that can be added. The knots are added in such a way that it achieves the larges
 of mean squared errors accross all functional data.)
 }
 \section{References}{
- Nassar, H., Podgórski, K. (2019) Empirically driven
-  orthonormal bases for functional data analysis. \emph{Preprint}. Department
-  of Statistics, Lund University.
+
+Nassar, H., Podgórski, K. Empirically driven orthonormal bases for functional data analysis.
+\emph{Proceedings of European Numerical Mathematics and Advanced Applications Conference 2019}.
+Cognitive Systems, Department of Applied Mathematics and Computer Science, Technical University of Denmark, Denmark
+
+Basna, R. Nassar, H., Podgórski, K. Machine Learning Assisted Orthonormal Bases Selection for Functional Data Analysis. (preprint)
 }
 
 \examples{
@@ -72,8 +75,6 @@ AMSE=c(mean((nx-1)/nx*apply(f,1,var)))
 knots=c(0,nx) #We take zero as the location of the first knot since, we want intervals pointed
 # by 'knots' to be open-close, i.e. the k-th interval is 'knots[k]+1, knots[k+1]'
 K=length(knots)
-L=30
-M=5
 
 KS=add_knots_validation(f,knots=knots,L=10, M = 5)
 KS
@@ -84,7 +85,4 @@ plot(log(KS$APPRERR))
 \code{split}  for constructing split at a given knot; \code{opt_split}
 for finding the optimal split within one interval; \code{add_splitw}
 for selecting  the optimal split from a set of potential splits.
-
-##
-# Requires 'rbetafda' function.
 }
