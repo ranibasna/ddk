@@ -62,7 +62,7 @@
 #' # by 'knots' to be open-close, i.e. the k-th interval is 'knots[k]+1, knots[k+1]'
 #' K=length(knots)
 #'
-#' KS=add_knots_validation(f,knots=knots,L=10, M = 5)
+#' KS=add_knots(f,knots=knots,L=10, M = 5)
 #' KS
 #'
 #' plot(log(KS$APPRERR))
@@ -74,7 +74,7 @@
 
 
 #############
-add_knots_validation=function(f,f_v = NULL,knots,L,M=5)
+add_knots=function(f,f_v = NULL,knots,L,M=5)
 {
   nx=dim(f)[2] #The number of points in the grid
   #Evaluating AMSE for the input knots.
