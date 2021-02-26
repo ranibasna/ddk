@@ -30,7 +30,7 @@ A list of the following values
                  average mean square errors}
  \item{APPRERR}{the decreasing sequence of the averaged squared L2 norms:
                 ||f1 - hat f1l||_2^2+...+||fn - hat fnl||_2^2, l=0,...,L, where hat f_il are piecewise constant
-                approximation of fi's with l knots added to the input knots.  }
+                approximation of fi's with l knots added to the input knots.}
 }
 \description{
 Given discretized functional data \code{f} defined over a grid, find the knots that are quasi-optimal for
