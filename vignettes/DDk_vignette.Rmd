@@ -1,0 +1,68 @@
+---
+title: "DDk_vignette"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{DDk_vignette}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+header-includes:
+  - \usepackage[ruled,vlined,linesnumbered]{algorithm2e}
+  - \usepackage{fancyhdr,amsmath,amssymb}
+  - \usepackage{algorithmic}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r setup}
+library(DDK)
+```
+
+
+This is an R implementation for the data driven orthogonal basis selection for functional data analysis paper. For more detaiils see [the arxiv link](https://arxiv.org/pdf/2103.07453.pdf)
+
+In this work, we propose machine learning style techniques for the placement of the knots. The chosen knots are used to build orthogonal splines basis functions $f_k(t), k=1,...,K$ that are used in basis function expansion to convert the data from discrete recorded data into a functional one. The method address the problem of the choice of the initial functional basis selection for functional data analysis. 
+
+\section{DDK algorithm}
+
+# DKK algorithm
+
+
+\begin{algorithm}[H]
+\caption{DDK algorithm}
+\label{DDK_Algorithm}
+\SetAlgoLined
+\KwIn{$I$ - knot search interval, $\theta$ - validation hyperparameter, $\mathcal X_{train}$ - training data, $\mathcal X_{valid}$ - validation data}
+ \begin{itemize}
+     \item Find the first global knot $\xi$ using equation \ref{new} on $\mathcal X_{train}$\; 
+     \item Add split to $I$ at the location of $\xi$ and add $\xi$ to $\mathcal{K}^{(0)}$, the initial set of knots\;
+     \item Set $s=1$
+ \end{itemize}
+ \While {condition \ref{TestTheta_1} or \ref{TestTheta_2} on $\mathcal X_{valid}$ is satisfied}{
+ \begin{itemize}
+     \item Find the new optimal placement using equation \ref{nominated};
+     \item Add split to $I$ at the location of the new selected knot $\xi_s$.
+     \item $s = s+1$
+ \end{itemize}
+ }
+\KwOut{$\mathcal{K}^{(s)}$}
+\end{algorithm}
+
+## Installation
+
+
+
+You can install the development version from [GitHub](https://github.com/ranibasna/ddk) with:
+
+``` r
+# install.packages("devtools")
+devtools::install_github("ranibasna/ddk")
+```
+
+
+
+

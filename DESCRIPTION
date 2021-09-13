@@ -23,4 +23,7 @@ LazyData: true
 Language: en-US
 RoxygenNote: 7.1.0
 Suggests: 
-    testthat
+    testthat,
+    knitr,
+    rmarkdown
+VignetteBuilder: knitr
