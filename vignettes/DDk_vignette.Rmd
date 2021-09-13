@@ -54,8 +54,6 @@ In this work, we propose machine learning style techniques for the placement of 
 
 ## Installation
 
-
-
 You can install the development version from [GitHub](https://github.com/ranibasna/ddk) with:
 
 ``` r
