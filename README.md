@@ -5,7 +5,7 @@
 
 
 
-<!-- # DDK <a href='https://github.com/ranibasna/ddk/'><img src='man/figures/logo.png' align="right" height="139" /></a> -->
+# DDK <a href='https://github.com/ranibasna/ddk/'><img src='logo.png' align="right" height="139" /></a>
 
 [![Last-changedate](https://img.shields.io/badge/last%20change-2021--09--14-brightgreen.svg)](/commits/master)
 
