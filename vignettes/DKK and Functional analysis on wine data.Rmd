@@ -17,17 +17,19 @@ knitr::opts_chunk$set(
 )
 ```
 
+This article attempts at reproducing the results presented at the paper Machine Learning Assisted Orthonormal Basis Selection for Functional Data Analysis.
 
 # Libraies
-```{r}
-# install.packages("Splinets") for Orogonal projections
+```{r, message=FALSE}
+# install.packages("Splinets") for Orthogonal projections
 library(Splinets)
 library(DDK)
 library(ggplot2)
 library(reshape2)
 library(RColorBrewer)
-
 ```
+
+We will first write few helper functions. These functions depends on few packages. Most importantly, the package Splinets. In order to get a full understanding of these objects and functions, one needs some understanding of the DDK methods presented in above mentioned paper as well as the practicle usage of the package Splinets presented at this [arxiv paper](https://arxiv.org/abs/2102.00733) 
 
 # Helper Functions
 ```{r functions}
@@ -143,6 +145,9 @@ plot_EigenfunctionEigenValueScaled <- function(ProjCovEigObj, EigenNumber, mrgn=
 ```
 
 # wine data
+
+For more details on the wine data, see the description part of the data in the DDK paper. 
+
 ```{r}
 # get the data from the DKK pacakge
 data("Wine")
@@ -175,8 +180,9 @@ Next, we plot the reduction in AMSE in the Functional Wine data.(Orange-bottom) 
 
 ```{r plotingWineData}
 # ploting the reduction of the AMSE 
+# For train data
 df_knots_wine <- data.frame("x" = seq_len(length(KS_wine[[3]])), "Error_reduction" = KS_wine[[3]])
-# for test data
+# For test data
 df_knots_wine_test <- data.frame("x" = seq_len(length(KS_wine[[4]])), "Error_reduction" = KS_wine[[4]])
 # ploting amse reduction
 {plot(x =  df_knots_wine_test$x,y =  df_knots_wine_test$Error_reduction,type='p',pch=16, xlim = c(0,15), ylim = c(0,0.01),ylab='Average Mean Square Error',xlab='Iterations', bty="n", col="deepskyblue4")
