@@ -15,6 +15,10 @@ rbetafda(n, nx = 500, ta = 1, tb = 1, sigma = 0, K = 1000, seed)
 
 \item{tb}{is shape parameter}
 
+\item{sigma}{need a description here}
+
+\item{K}{need a description here}
+
 \item{seed}{is a seeding option for reproducibility issues}
 }
 \value{

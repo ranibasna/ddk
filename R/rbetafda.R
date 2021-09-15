@@ -3,7 +3,8 @@
 #' @param nx number of coloumns
 #' @param ta is shape parameter
 #' @param tb is shape parameter
-#' @param
+#' @param sigma need a description here
+#' @param K need a description here
 #' @param seed is a seeding option for reproducibility issues
 #' @return The function produces a fda random sample of size n over the equidistant grid of size nx, 1/(nx+1):1/(nx+1):nx/(nx+1)
 #' with equal to square roots of beta densities with parameters alpha and beta simulated independently from gamma distributions with

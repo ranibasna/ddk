@@ -6,25 +6,34 @@ Authors@R:
     c(person(given = "Rani",
              family = "Basna",
              role = c("aut", "cre"),
-             email = "ranibasna@gmail.com"),
+             email = "ranibasna@gmail.com",
+             comment = c(ORCID = "0000-0001-7510-8460")),
       person(given = "Hiba",
              family = "Nassar",
              role = c("aut"),
-             email = "hibna@dtu.dk"),
+             email = "hibna@dtu.dk",
+             comment = c(ORCID = "0000-0003-0250-626X")),
       person(given = "Krzysztof",
              family = "Podgórski",
              role = c("aut"),
-             email = "Krzysztof.Podgorski@stat.lu.se "))
+             email = "Krzysztof.Podgorski@stat.lu.se ",
+             comment = c(ORCID = "0000-0003-0043-1532")))
 Maintainer: The package maintainer <ranibasna@gmail.com>
 Description: Use machine learning methods to assit in finding optimal orthonormal basis selection.
+Depends: 
+  R (>= 2.10)
 License: GPL-3
 Encoding: UTF-8
 LazyData: true
 Language: en-US
-RoxygenNote: 7.1.0
+RoxygenNote: 7.1.2
 Suggests: 
     testthat,
     knitr,
-    rmarkdown
+    rmarkdown,
+    Splinets,
+    ggplot2,
+    reshape2,
+    RColorBrewer
 VignetteBuilder: knitr
-URL: https://github.com/ranibasna/ddk
+URL: https://ranibasna.github.io/ddk/, https://github.com/ranibasna/ddk

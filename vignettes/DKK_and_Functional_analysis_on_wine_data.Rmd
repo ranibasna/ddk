@@ -7,6 +7,7 @@ vignette: >
   %\VignetteIndexEntry{Reproducing analysis on wine data}
   %\VignetteEngine{knitr::rmarkdown}
   %\VignetteEncoding{UTF-8}
+  %\VignetteDepends{ggplot2}
 ---
 
 ```{r setup, include = FALSE}
@@ -236,7 +237,7 @@ plot(WineObj$Spect$values, type ='p',col='darkorange3', lwd=4, ylab="", xlab="",
 
 Next, we plot the first three eigen functions scaled by the square roots of their corresponding eigenvalues.
 
-```{r EigenfunctionEigenValueScaledPlot}
+```{r EigenfunctionScaled}
 plot_EigenfunctionEigenValueScaled(ProjCovEigObj = WineObj, EigenNumber = 3)    
 ```
 
