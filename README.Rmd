@@ -39,28 +39,21 @@ In this work, we propose machine learning style techniques for the placement of 
 
 
 # DKK algorithm
-\subsection{DDK algorithm}
 
-\begin{algorithm}[H]
-\caption{DDK algorithm}
-\label{DDK_Algorithm}
-\SetAlgoLined
-\KwIn{$I$ - knot search interval, $\theta$ - validation hyperparameter, $\mathcal X_{train}$ - training data, $\mathcal X_{valid}$ - validation data}
- \begin{itemize}
-     \item Find the first global knot $\xi$ using equation \ref{new} on $\mathcal X_{train}$\; 
-     \item Add split to $I$ at the location of $\xi$ and add $\xi$ to $\mathcal{K}^{(0)}$, the initial set of knots\;
-     \item Set $s=1$
- \end{itemize}
- \While {condition \ref{TestTheta_1} or \ref{TestTheta_2} on $\mathcal X_{valid}$ is satisfied}{
- \begin{itemize}
-     \item Find the new optimal placement using equation \ref{nominated};
-     \item Add split to $I$ at the location of the new selected knot $\xi_s$.
-     \item $s = s+1$
- \end{itemize}
- }
-\KwOut{$\mathcal{K}^{(s)}$}
-\end{algorithm}
+For a more detailed description see the paper.
 
+**Input** : knot search interval, $\theta$ - validation hyperparameter, $\mathcal X_{train}$ - training data, $\mathcal X_{valid}$ - validation data
+- Find the first global knot $\xi$ using equation \ref{new} on $\mathcal X_{train}$.
+
+- Add split to $I$ at the location of $\xi$ and add $\xi$ to $\mathcal{K}^{(0)}$, the initial set of knots.
+
+- Set $s=1$.
+
+ **While** stopping condition (see the stopping condition in the paper) on $\mathcal X_{valid}$ is satisfied
+ 
+  1. Find the new optimal placement using equation \ref{nominated};
+  2. Add split to $I$ at the location of the new selected knot $\xi_s$.
+  3. $s = s+1$
 
 
 

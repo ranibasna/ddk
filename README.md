@@ -7,7 +7,7 @@
 
 # DDK <a href='https://github.com/ranibasna/ddk/'><img src='man/figures/logo.png' align="right" height="139" /></a>
 
-[![Last-changedate](https://img.shields.io/badge/last%20change-2021--09--14-brightgreen.svg)](/commits/master)
+[![Last-changedate](https://img.shields.io/badge/last%20change-2021--09--15-brightgreen.svg)](/commits/master)
 
 # Data driven orthogonal basis selection for functional data analysis
 
@@ -31,6 +31,26 @@ the choice of the initial functional basis selection for functional data
 analysis.
 
 # DKK algorithm
+
+For a more detailed description see the paper.
+
+**Input** : knot search interval, *θ* - validation hyperparameter,
+𝒳<sub>*t**r**a**i**n*</sub> - training data, 𝒳<sub>*v**a**l**i**d*</sub>
+- validation data - Find the first global knot *ξ* using equation on
+𝒳<sub>*t**r**a**i**n*</sub>.
+
+-   Add split to *I* at the location of *ξ* and add *ξ* to
+    𝒦<sup>(0)</sup>, the initial set of knots.
+
+-   Set *s* = 1.
+
+**While** stopping condition (see the stopping condition in the paper)
+on 𝒳<sub>*v**a**l**i**d*</sub> is satisfied
+
+1.  Find the new optimal placement using equation ;
+2.  Add split to *I* at the location of the new selected knot
+    *ξ*<sub>*s*</sub>.
+3.  *s* = *s* + 1
 
 ## Installation
 
