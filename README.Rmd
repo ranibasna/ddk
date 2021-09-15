@@ -8,7 +8,7 @@ header-includes:
 
 # DDK <a href='https://github.com/ranibasna/ddk/'><img src='man/figures/logo.png' align="right" height="139" /></a>
 
-[![Last-changedate](https://img.shields.io/badge/last%20change-`r gsub('-', '--', Sys.Date())`-brightgreen.svg)](/commits/master)
+
 
 ```{r, include = FALSE}
 knitr::opts_chunk$set(
@@ -19,13 +19,14 @@ knitr::opts_chunk$set(
 )
 ```
 
-# Data driven orthogonal basis selection for functional data analysis
-
 <!-- badges: start -->
+[![Last-changedate](https://img.shields.io/badge/last%20change-`r gsub('-', '--', Sys.Date())`-brightgreen.svg)](/commits/master)
 [![R-CMD-check](https://github.com/ranibasna/ddk/workflows/R-CMD-check/badge.svg)](https://github.com/ranibasna/ddk/actions)
 <!-- badges: end -->
 
 
+
+# Data driven orthogonal basis selection for functional data analysis
 
 
 <!-- You'll still need to render `README.Rmd` regularly, to keep `README.md` up-to-date. `devtools::build_readme()` is handy for this. You could also use GitHub Actions to re-render `README.Rmd` every time you push. An example workflow can be found here: <https://github.com/r-lib/actions/tree/master/examples>. -->
