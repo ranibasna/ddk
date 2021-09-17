@@ -106,7 +106,7 @@ add_split=function(f,LE,RE,AMSE,AMSE1,AMSE2,splits, M=5)
   #DAMSE=AMSE-((splits-LE)/(RE-LE))*AMSE1-((RE-splits)/(RE-LE))*AMSE2
   DAMSE=AMSE*(RE-LE)-(splits-LE)*AMSE1-(RE-splits)*AMSE2
   #DAMSE=((splits-LE)/(RE-LE))*AMSE1+((RE-splits)/(RE-LE))*AMSE2
-  cat("DMSE add_split", DAMSE, "\n")
+  # cat("DMSE add_split", DAMSE, "\n")
 
 
   pos=which.max(DAMSE) #Location of the optimal split (also left hand side endpoint of the corresponding knot-interval)

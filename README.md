@@ -9,7 +9,7 @@
 
 <!-- badges: start -->
 
-[![Last-changedate](https://img.shields.io/badge/last%20change-2021--09--15-brightgreen.svg)](/commits/master)
+[![Last-changedate](https://img.shields.io/badge/last%20change-2021--09--17-brightgreen.svg)](/commits/master)
 [![R-CMD-check](https://github.com/ranibasna/ddk/workflows/R-CMD-check/badge.svg)](https://github.com/ranibasna/ddk/actions)
 <!-- badges: end -->
 
@@ -63,3 +63,9 @@ You can install the development version from
 # install.packages("devtools")
 devtools::install_github("ranibasna/ddk")
 ```
+
+## Reproducing the results in the paper
+
+For reproducing the results presented in the paper for the Wine data,
+see [this
+link](https://ranibasna.github.io/ddk/articles/DKK_and_Functional_analysis_on_wine_data.html)

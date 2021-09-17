@@ -76,6 +76,12 @@
 #############
 add_knots=function(f,f_v = NULL,knots,L,M=5)
 {
+  # check the class of the data
+  if (is.vector(f)){
+    # transpose the vector to become a matrix
+    f = matrix(data = f, nrow = 1, ncol = length(f))
+  }
+
   nx=dim(f)[2] #The number of points in the grid
   #Evaluating AMSE for the input knots.
   K=length(knots)
@@ -93,9 +99,9 @@ add_knots=function(f,f_v = NULL,knots,L,M=5)
   AMSE1=splits #The left-hand side (with respect to corresponding 'splits') values of the average mean square error
   AMSE2=splits #The right-hand side (with respect to corresponding 'splits') values of the average mean square error
 
-  #First run through all the intervals is to compute all interval-wise split and corresponding 'AMSE1' and 'AMSE2'
 
-#print(K)
+
+  #First run through all the intervals is to compute all interval-wise split and corresponding 'AMSE1' and 'AMSE2'
   for(k in 1:(K-1)) #the loop running through all the intervals at the current knots values
   {
     #print(k)
@@ -123,7 +129,7 @@ add_knots=function(f,f_v = NULL,knots,L,M=5)
 
   if(!is.null(f_v)){
     nx_v <- length(na.omit(f_v[1,]))
-    cat("nx is", nx_v, "\n")
+    # cat("nx is", nx_v, "\n")
     len_v = nx_v
     TMSE_v = c()
     AMSE_v = c()
@@ -212,8 +218,8 @@ add_knots=function(f,f_v = NULL,knots,L,M=5)
         AMSE_v = append(AMSE_v, s_v[2],after = l)
         len_v[l] = l_v[1]
         len_v = append(len_v, l_v[2],after = l)
-        cat("AMSE_v is", AMSE_v,"\n")
-        cat("len_v is", len_v, sum(len_v), "\n")
+        # cat("AMSE_v is", AMSE_v,"\n")
+        # cat("len_v is", len_v, sum(len_v), "\n")
         #TMSE_v = sum(len_v*AMSE_v)/nx_v
         TMSE_v = append(TMSE_v, sum(len_v*AMSE_v)/nx_v)
 

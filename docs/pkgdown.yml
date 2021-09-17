@@ -4,7 +4,7 @@ pkgdown_sha: ~
 articles:
   DDk_vignette: DDk_vignette.html
   DKK_and_Functional_analysis_on_wine_data: DKK_and_Functional_analysis_on_wine_data.html
-last_built: 2021-09-17T07:23Z
+last_built: 2021-09-17T08:19Z
 urls:
   reference: https://ranibasna.github.io/ddk//reference
   article: https://ranibasna.github.io/ddk//articles

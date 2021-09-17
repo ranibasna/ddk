@@ -58,7 +58,6 @@ For a more detailed description see the paper.
   3. $s = s+1$
 
 
-
 ## Installation
 
 You can install the development version from [GitHub](https://github.com/ranibasna/ddk) with:
@@ -67,6 +66,10 @@ You can install the development version from [GitHub](https://github.com/ranibas
 # install.packages("devtools")
 devtools::install_github("ranibasna/ddk")
 ```
+
+## Reproducing the results in the paper
+
+For reproducing the results presented in the paper for the Wine data, see [this link](https://ranibasna.github.io/ddk/articles/DKK_and_Functional_analysis_on_wine_data.html)
 
 
 
