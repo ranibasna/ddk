@@ -6,3 +6,4 @@
 ^pkgdown$
 ^logo
 ^\.github$
+^codecov\.yml$

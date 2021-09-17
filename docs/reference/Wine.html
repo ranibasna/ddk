@@ -6,7 +6,8 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Finding the optimal splitting point which minimize the average mean square error over the range of the data. — opt_split • DDK</title>
+<title>For the purpose of testing the efficiency of DDK methods we choose the classical functional wine spectra dataset. The wine dataset is provided by
+Professor Marc Meurens of the University Catholique de Louvain. — Wine • DDK</title>
 
 <!-- favicons -->
 <link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
@@ -46,9 +47,10 @@
 
 
 
-<meta property="og:title" content="Finding the optimal splitting point which minimize the average mean square error over the range of the data. — opt_split" />
-<meta property="og:description" content="For a given data f and its average mean square error AMSE, the function returns a vector of
-the optimal split with the average mean square errors on the left and right of the splitting point, respectively." />
+<meta property="og:title" content="For the purpose of testing the efficiency of DDK methods we choose the classical functional wine spectra dataset. The wine dataset is provided by
+Professor Marc Meurens of the University Catholique de Louvain. — Wine" />
+<meta property="og:description" content="The data set consists of results collected from an experiment measuring the alcohol concentration in wine samples by mid infrared spectroscopy.
+The training and validation sets contain 94 and 30 spectra, respectively" />
 <meta property="og:image" content="https://ranibasna.github.io/ddk/logo.png" />
 
 
@@ -132,66 +134,27 @@ the optimal split with the average mean square errors on the left and right of t
 <div class="row">
   <div class="col-md-9 contents">
     <div class="page-header">
-    <h1>Finding the optimal splitting point which minimize the average mean square error over the range of the data.</h1>
-    <small class="dont-index">Source: <a href='https://github.com/ranibasna/ddk/blob/master/R/opt_split.R'><code>R/opt_split.R</code></a></small>
-    <div class="hidden name"><code>opt_split.Rd</code></div>
+    <h1>For the purpose of testing the efficiency of DDK methods we choose the classical functional wine spectra dataset. The wine dataset is provided by
+Professor Marc Meurens of the University Catholique de Louvain.</h1>
+    <small class="dont-index">Source: <a href='https://github.com/ranibasna/ddk/blob/master/R/Wine.R'><code>R/Wine.R</code></a></small>
+    <div class="hidden name"><code>Wine.Rd</code></div>
     </div>
 
     <div class="ref-description">
-    <p>For a given data <code>f</code> and its average mean square error <code>AMSE</code>, the function returns a vector of
-the optimal split with the average mean square errors on the left and right of the splitting point, respectively.</p>
+    <p>The data set consists of results collected from an experiment measuring the alcohol concentration in wine samples by mid infrared spectroscopy.
+The training and validation sets contain 94 and 30 spectra, respectively</p>
     </div>
 
-    <pre class="usage"><span class='fu'>opt_split</span><span class='op'>(</span><span class='va'>f</span>, <span class='va'>AMSE</span>, M <span class='op'>=</span> <span class='fl'>5</span><span class='op'>)</span></pre>
+    <pre class="usage"><span class='va'>Wine</span></pre>
 
-    <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
-    <table class="ref-arguments">
-    <colgroup><col class="name" /><col class="desc" /></colgroup>
-    <tr>
-      <th>f</th>
-      <td><p>n x nx matrix. where n is number of samples (rows) and nx reperesents the grid size
-in functional data interpreptation, AMSE is the total of mean square errors computed rowwise</p></td>
-    </tr>
-    <tr>
-      <th>AMSE</th>
-      <td><p>integer.  the average mean square errors of <code>f</code> computed over its range.</p></td>
-    </tr>
-    <tr>
-      <th>M</th>
-      <td><p>integer.  the minimal number of points between the optimal split  and the two ends of the iterval.
-The default is 10.  The program will return <code>Na</code> if there are less than <code>2*M+1</code> points in the range <code>f</code>.</p></td>
-    </tr>
-    </table>
 
-    <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
+    <h2 class="hasAnchor" id="format"><a class="anchor" href="#format"></a>Format</h2>
 
-    <p>A list made of three numeric values:  <code>opt_ix</code>, <code>AMSE_L</code> and <code>AMSE_R</code>.
-The first numiric value <code>opt_ix</code> is the optimal split (knot), and  <code>AMSE_L</code>, <code>AMSE_R</code>
-are the average mean square errors left and right the spliting point, respectively.</p>
-    <h2 class="hasAnchor" id="references"><a class="anchor" href="#references"></a>References</h2>
+    <p>A list that contains for arrays x.learning, y.learning, x.test, y.test</p>
+    <h2 class="hasAnchor" id="source"><a class="anchor" href="#source"></a>Source</h2>
 
-    <p>Nassar, H., Podgórski, K. (2019) Empirically driven
-orthonormal bases for functional data analysis. <em>Preprint</em>. Department of Statistics, Lund University.</p>
-    <h2 class="hasAnchor" id="see-also"><a class="anchor" href="#see-also"></a>See also</h2>
+    <p><a href='https://github.com/cran/cggd/tree/master/data/'>https://github.com/cran/cggd/tree/master/data/</a></p>
 
-    <div class='dont-index'><p><code>split</code> for constructing split at a given knot;</p></div>
-
-    <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'><span class='co'>## Example:</span>
-<span class='va'>n</span><span class='op'>=</span><span class='fl'>10</span>
-<span class='va'>f</span><span class='op'>=</span><span class='fu'><a href='rbetafda.html'>rbetafda</a></span><span class='op'>(</span><span class='va'>n</span><span class='op'>)</span>
-<span class='va'>nx</span><span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/base/dim.html'>dim</a></span><span class='op'>(</span><span class='va'>f</span><span class='op'>)</span><span class='op'>[</span><span class='fl'>2</span><span class='op'>]</span>
-<span class='va'>AMSE</span> <span class='op'>=</span> <span class='fu'><a href='amse.html'>amse</a></span><span class='op'>(</span><span class='va'>f</span><span class='op'>)</span> <span class='co'>### Total mean square error for whole the samples</span>
-<span class='fu'>opt_split</span><span class='op'>(</span><span class='va'>f</span>,<span class='va'>AMSE</span><span class='op'>)</span>
-</div><div class='output co'>#&gt; [[1]]
-#&gt; [1] 483
-#&gt; 
-#&gt; [[2]]
-#&gt; [1] 0.06773946
-#&gt; 
-#&gt; [[3]]
-#&gt; [1] 0.3171577
-#&gt; </div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
     <nav id="toc" data-toggle="toc" class="sticky-top">
