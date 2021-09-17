@@ -212,7 +212,7 @@ add_knots=function(f,f_v = NULL,knots,L,M=5)
           #browser()
           next
       }
-        # length of teh current f_v
+        # length of the current f_v
         l_v = c(length(na.omit(f_v[1,(NL[l]+1):NR[l]])),length(na.omit(f_v[1,(NL[l+1]+1):NR[l+1]])))
         AMSE_v[l] = s_v[1]
         AMSE_v = append(AMSE_v, s_v[2],after = l)

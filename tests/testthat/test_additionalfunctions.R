@@ -5,4 +5,8 @@ test_that("testing the additionalfunctions", {
   expect_equal(amse(x), 6.625)
   f1 <- rbetafda(n = 10, seed = 11)
   expect_equal(as.numeric(format(signif(amse(f1)), nsmall = 1)), 0.109381)
+  # test vector data class
+  f_vec <- rbetafda(n = 1, nx = 10, seed = 3)
+  expect_equal(amse(f_vec), 0.004756012)
+  expect_equal(mse(f_vec), 0.004756012)
 })

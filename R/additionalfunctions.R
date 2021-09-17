@@ -30,7 +30,6 @@ mse=function(x){
   }
 }
 
-
 #' Function average Mean Square Error 'AMSE'
 #' For a given data f, the function 'AMSE' returns the
 #' average mean square error for the data over all samples
@@ -52,7 +51,3 @@ amse= function(f){
     return(mean(row_mse, na.rm = TRUE))
   }
 }
-
-
-
-

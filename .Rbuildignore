@@ -7,3 +7,4 @@
 ^logo
 ^\.github$
 ^codecov\.yml$
+^appveyor\.yml$
