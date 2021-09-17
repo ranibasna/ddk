@@ -7,6 +7,8 @@
 [![R-CMD-check](https://github.com/ranibasna/ddk/workflows/R-CMD-check/badge.svg)](https://github.com/ranibasna/ddk/actions)
 [![AppVeyor build
 status](https://ci.appveyor.com/api/projects/status/github/ranibasna/ddk?branch=master&svg=true)](https://ci.appveyor.com/project/ranibasna/ddk)
+[![Codecov test
+coverage](https://codecov.io/gh/ranibasna/ddk/branch/master/graph/badge.svg)](https://codecov.io/gh/ranibasna/ddk?branch=master)
 <!-- badges: end -->
 
 <!-- [![Codecov test coverage](https://codecov.io/gh/ranibasna/NumericalTransformation/branch/master/graph/badge.svg)](https://codecov.io/gh/ranibasna/NumericalTransformation?branch=master) -->

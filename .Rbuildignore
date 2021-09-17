@@ -6,5 +6,5 @@
 ^pkgdown$
 ^logo
 ^\.github$
-^codecov\.yml$
 ^appveyor\.yml$
+^codecov\.yml$
