@@ -108,7 +108,7 @@ add_knots=function(f,f_v = NULL,knots,L,M=5)
     #browser()
     ff=f[,(knots[k]+1):(knots[k+1]), drop=FALSE]
     AMSE[k]=amse(ff) #Here we keep the average mean squared errors for the input knots
-    newsp=opt_split(ff,AMSE[k]) #Finding optimal split with the given interval
+    newsp=opt_split(ff,AMSE[k],M=M) #Finding optimal split with the given interval
     splits[k]=knots[k]+newsp[[1]]
     AMSE1[k]=newsp[[2]]
     AMSE2[k]=newsp[[3]]
@@ -160,7 +160,7 @@ add_knots=function(f,f_v = NULL,knots,L,M=5)
       break
     }
     else{
-      opt2=add_split(f,FLE,FRE,FAMS,FAMS1,FAMS2,Fspl)
+      opt2=add_split(f,FLE,FRE,FAMS,FAMS1,FAMS2,Fspl, M=M)
       l=opt2$locsp #location of the new knot in the intervals used for the computation, i.e. the knot is
       #in (L[l]+1):R[l] so that the new intervals are (L[l]+1):NR[l], (NL[l+1]+1):R[l]
       #where NR[l]=NL[l+1] is the new split (knot)
